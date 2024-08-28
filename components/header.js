@@ -1,21 +1,14 @@
 import Link from "next/link";
 import NavLink from "./nav-link";
-import classes from './header.module.css'
 
 export default function Header(){
     
     return(
-        <header className={classes.header}>
-            <Link className={classes.logo} href="/">D I T I L E N K O</Link>
-            <nav className={classes.nav}>
-                <ul>
-                    <li>
-                        <NavLink href="/meals">Browse all Meals </NavLink>
-                    </li>
-                    <li>
-                        <NavLink href="/community">Browse our Communities </NavLink>
-                    </li>
-                </ul>
+        <header >
+            <nav className='w-full mt-4 text-center md:flex'>
+            <Link className='w-screen hover:text-white hover:text-xl' href="/">D I T I L E N K O</Link>
+            <NavLink className="w-full" href="/songs">Browse all songs </NavLink>
+            <NavLink className="w-full" href="/community">Browse our Communities </NavLink>
             </nav>
         </header>
     )
