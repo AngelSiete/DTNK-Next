@@ -7,7 +7,7 @@ export default function Home() {
       <div className="h-80 w-80 relative">
       <Image src="/diti.jpg" alt="ditifoto" fill className="rounded-full" />
       </div>
-      <Socials/>
+      <Socials classWidth="w-20"/>
     </main>
   );
 }
