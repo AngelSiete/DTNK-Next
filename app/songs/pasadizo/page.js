@@ -7,13 +7,13 @@ export default function ShareSongPage() {
 
   return (
       <>
-     {!isAuthed && <Identifier isAuthed={false} onLoggedIn={() => setIsAuthed(true)} />}
+     {!isAuthed && <Identifier onLoggedIn={() => setIsAuthed(true)} />}
       {isAuthed && <p>Authed!</p>}
       </>
   );
 };
 
-function Identifier({isAuthed,onLoggedIn}){
+function Identifier({onLoggedIn}){
 
   function handleSubmit(event){
     event.preventDefault();
@@ -23,7 +23,8 @@ function Identifier({isAuthed,onLoggedIn}){
     const envEmail = process.env.EMAIL
     const envPass = process.env.PASSWORD
     console.log(envEmail)
-    if(email === envEmail && password === envPass){
+    // if(email === envEmail && password === envPass){
+      if(email === 'test2@test.com' && password === 'test'){
       console.log('authed!')
       onLoggedIn()
     }
