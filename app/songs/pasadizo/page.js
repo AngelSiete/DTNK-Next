@@ -46,13 +46,13 @@ function NewSongForm(){
     <p>Datos de la nueva canción:</p>
     <form className="flex flex-col" action={shareSong}>
     <p>Nombre:</p>
-    <input type="nombre" name="nombre" placeholder="nombre"  className="my-6 mx-20"></input>
+    <input type="text" name="title" placeholder="nombre"  className="my-6 mx-20"></input>
     <p>Fecha:</p>
-    <input type="text" name="fecha" placeholder="fecha" className="mx-20"></input>
+    <input type="text" name="date" placeholder="fecha" className="mx-20"></input>
     <p>Imagen:</p>
     <ImagePicker label="your image" name="image"/>
     <p>Productor:</p>
-    <input type="text" name="productor" placeholder="productor" className="mx-20"></input>
+    <input type="text" name="producer" placeholder="productor" className="mx-20"></input>
     <button type="submit" className="rounded-full mt-6 hover:text-white bg-white hover:bg-slate-300 w-60 m-auto" >Añadir canción</button>
     </form>
     </div>
