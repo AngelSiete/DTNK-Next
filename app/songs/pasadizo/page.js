@@ -1,5 +1,6 @@
 "use client";
 
+import {shareSong} from "@/lib/actions";
 import ImagePicker from "@/components/songs/image-picker";
 import { useState } from "react";
 
@@ -43,7 +44,7 @@ function NewSongForm(){
   return(
   <div className="w-2/3 h-max flex justify-center align-middle m-auto mt-40 bg-slate-500 rounded-md py-5 my-2 flex-col">
     <p>Datos de la nueva canción:</p>
-    <form className="flex flex-col">
+    <form className="flex flex-col" action={shareSong}>
     <p>Nombre:</p>
     <input type="nombre" name="nombre" placeholder="nombre"  className="my-6 mx-20"></input>
     <p>Fecha:</p>
