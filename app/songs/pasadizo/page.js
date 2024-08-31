@@ -2,15 +2,22 @@
 
 import {shareSong} from "@/lib/actions";
 import ImagePicker from "@/components/songs/image-picker";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ShareSongPage() {
   const [isAuthed, setIsAuthed] = useState(false);
 
+  useEffect(()=>{
+    const value = localStorage.getItem("logged")
+    if (value && value === 'true'){
+      setIsAuthed(true);
+    }
+  },[])
+
   return (
       <>
-     {!isAuthed && <Identifier onLoggedIn={() => setIsAuthed(true)} />}
       {isAuthed && <NewSongForm />}
+      {!isAuthed && <Identifier onLoggedIn={() => setIsAuthed(true)} />}
       </>
   );
 };
@@ -26,6 +33,7 @@ function Identifier({onLoggedIn}){
     const envPass = process.env.NEXT_PUBLIC_PASSWORD
     if(email === envEmail && password === envPass){
       onLoggedIn()
+      localStorage.setItem("logged", 'true')
     }
   }
   return(
@@ -41,6 +49,11 @@ function Identifier({onLoggedIn}){
 };
 
 function NewSongForm(){
+  useEffect(()=>{
+    setTimeout(() => {
+      localStorage.setItem("logged", '')
+    }, 600000);
+  },[])
   return(
   <div className="w-2/3 h-max flex justify-center align-middle m-auto mt-40 bg-slate-500 rounded-md py-5 my-2 flex-col">
     <p>Datos de la nueva canción:</p>
