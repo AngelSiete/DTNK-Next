@@ -13,7 +13,7 @@ export default function SongItem({ title, slug, image, producer, date }) {
           </div>
         </header>
         <div>
-          <p >{producer}</p>
+          <p>{producer}</p>
           <div>
             <Link href={`/songs/${slug}`}>View Details</Link>
           </div>
