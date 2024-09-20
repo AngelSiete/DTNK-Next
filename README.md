@@ -1,1 +1,2 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Next.js based website for mexican artist Ditilenko, with db capabilities and tailwind styling.
+
