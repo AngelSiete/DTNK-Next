@@ -8,8 +8,6 @@ async function Songs() {
   }
 
 export default async function(){
-    const songs = await getSongs();
-    console.log(songs)
     return(
         <main>
         <Suspense fallback={<p>Cargando canciones</p>}>
