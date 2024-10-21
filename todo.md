@@ -1,6 +1,6 @@
 ---
 
-Properly and compeltely define the song card properties.
+Properly and completely define the song card properties.
 
 Add the capability to edit said songs once they have been added.
 
