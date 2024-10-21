@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function SongItem({ title, slug, image, producer, date }) {
     return (
-      <article className="my-4">
+      <article className="my-4 md:flex md:justify-evenly md:items-center">
         <header>
           <div >
             <Image src={image} alt={title} width='500' height='250' />
@@ -17,6 +17,7 @@ export default function SongItem({ title, slug, image, producer, date }) {
           <div className="text-center">
             <Link href={`/songs/${slug}`} className="text-2xl text-white text-center hover:text-3xl">View Details</Link>
           </div>
+          <p className="text-center text-gray-400">Launched in {date}</p>
         </div>
       </article>
     );
